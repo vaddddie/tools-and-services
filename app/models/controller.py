@@ -1,9 +1,17 @@
-from sqlalchemy import func
+from sqlalchemy import func, inspect
 from app.models.engine import engine, Base, Session
 from app.schemas.user import User
 
+inspector = inspect(engine)
+tables = inspector.get_table_names()
+
 def create_tables():
-    Base.metadata.drop_all(engine)
+    inspector = inspect(engine)
+    tables = inspector.get_table_names()
+
+    if tables:
+        Base.metadata.drop_all(engine, checkfirst=True)
+
     Base.metadata.create_all(engine)
     
 def add_new_users(users):

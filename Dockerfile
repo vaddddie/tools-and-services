@@ -1,13 +1,9 @@
-# Используем официальный Python образ
-FROM python:3.9-slim
+FROM python:3.13-slim
 
-# Устанавливаем зависимости
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Копируем приложение в контейнер
 COPY . /app
 
-# Запускаем приложение
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]

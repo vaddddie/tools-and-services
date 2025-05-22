@@ -15,7 +15,16 @@ services:
       - DATABASE_URL=postgresql://user:password@db:5432/mydatabase
     depends_on:
       - db
+      - test
     restart: always
+    
+  test:
+    build: .
+    command: pytest
+    volumes:
+      - .:/app
+    depends_on:
+      - db
 
   db:
     image: postgres:13
