@@ -1,0 +1,156 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top, #a8edea, #fed6e3);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.random-user-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.center-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.center-form {
+    background: rgba(255,255,255,0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input[type=number] {
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: none;
+    background-color: #4CAF50; /* зелёный */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+select {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th {
+    padding: 12px;
+    text-align: left;
+    font-weight: normal;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    padding: 12px;
+    vertical-align: middle;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.photo {
+    width:60px;
+    height:auto;
+    border-radius:4px;
+    object-fit:cover;
+}
+
+.pagination {
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+.page-btn {
+    padding: 8px 16px;
+    background-color:#4CAF50;
+    color:white;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.page-btn:hover {
+    background-color:#45a049;
+}
+
+.action-btn {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius:4px;
+    cursor:pointer;
+    transition: background-color .3s ease;
+    text-decoration: none;
+}
+
+.action-btn:hover {
+    background-color:#45a049;
+}

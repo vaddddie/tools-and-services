@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профиль пользователя</title>
+    <link rel="stylesheet" href="/static/css/profile_styles.css">
+</head>
+<body>
+
+<div class="container">
+    <img src="{{ user.picture }}" alt="Фото" class="profile-photo" />
+
+    <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+
+    <div class="info">
+        <div><strong>Пол: </strong>{{ user.gender }}</div>
+        <div><strong>Имя: </strong>{{ user.first_name }}</div>
+        <div><strong>Фамилия: </strong>{{ user.last_name }}</div>
+        <div><strong>Номер телефона: </strong>{{ user.phone }}</div>
+        <div><strong>Почта: </strong>{{ user.email }}</div>
+        <div><strong>Место проживания: </strong>{{ user.location }}</div>
+    </div>
+</div>
+</body>
+</html>
